@@ -17,6 +17,8 @@ import 'package:inject_generator/src/source/symbol_path.dart';
 import 'package:inject_generator/src/summary.dart';
 import 'package:meta/meta.dart' hide literal;
 
+const _constructorName = 'fromModule';
+
 /// Generates code for a dependency injection-aware library.
 class InjectCodegenBuilder extends AbstractInjectBuilder {
   final bool _useScoping;
@@ -140,7 +142,7 @@ class _InjectorBuilder {
   /// We create a single constructor that will be used by the source class'
   /// factory constructor. It has a single parameter for _each_ module that
   /// the injector uses.
-  final constructor = new ConstructorBuilder()..name = '_';
+  final constructor = new ConstructorBuilder()..name = _constructorName;
 
   /// Used to distinguish the names of unused modules.
   int _unusedCounter = 1;
@@ -217,7 +219,7 @@ class _InjectorBuilder {
       }
     }
     final initExpression = concreteInjectorType.newInstanceNamed(
-      '_',
+      _constructorName,
       moduleVariables.values.map((v) => refer(v.name).expression).toList(),
     );
     injectorCreator.body = new Block((b) => b.statements
