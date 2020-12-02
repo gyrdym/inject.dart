@@ -1,0 +1,122 @@
+{
+  "asset": "asset:inject.example.coffee/lib/src/drip_coffee_module.dart",
+  "summary": {
+    "injector": [],
+    "module": [
+      {
+        "name": "DripCoffeeModule",
+        "providers": [
+          {
+            "name": "provideBrand",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "dart:core#String",
+                "qualifier": "global:#brandName"
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": false,
+            "dependencies": []
+          },
+          {
+            "name": "provideModel",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "dart:core#String",
+                "qualifier": "global:#modelName"
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": false,
+            "dependencies": []
+          },
+          {
+            "name": "providePowerOutlet",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.coffee/lib/src/electric_heater.dart#PowerOutlet",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": true,
+            "dependencies": []
+          },
+          {
+            "name": "provideElectricity",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.coffee/lib/src/electric_heater.dart#Electricity",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": true,
+            "asynchronous": false,
+            "dependencies": [
+              {
+                "lookupKey": {
+                  "root": "asset:inject.example.coffee/lib/src/electric_heater.dart#PowerOutlet",
+                  "qualifier": null
+                },
+                "isProvider": false
+              }
+            ]
+          },
+          {
+            "name": "provideHeater",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.coffee/lib/src/heater.dart#Heater",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": true,
+            "dependencies": [
+              {
+                "lookupKey": {
+                  "root": "asset:inject.example.coffee/lib/src/electric_heater.dart#Electricity",
+                  "qualifier": null
+                },
+                "isProvider": false
+              }
+            ]
+          },
+          {
+            "name": "providePump",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.coffee/lib/src/pump.dart#Pump",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": false,
+            "dependencies": [
+              {
+                "lookupKey": {
+                  "root": "asset:inject.example.coffee/lib/src/heater.dart#Heater",
+                  "qualifier": null
+                },
+                "isProvider": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "injectable": []
+  }
+}

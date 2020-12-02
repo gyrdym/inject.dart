@@ -1,0 +1,8 @@
+{
+  "asset": "asset:inject.example.coffee/lib/src/pump.dart",
+  "summary": {
+    "injector": [],
+    "module": [],
+    "injectable": []
+  }
+}

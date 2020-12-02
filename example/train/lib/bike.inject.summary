@@ -1,0 +1,36 @@
+{
+  "asset": "asset:inject.example.train/lib/bike.dart",
+  "summary": {
+    "injector": [],
+    "module": [
+      {
+        "name": "BikeServices",
+        "providers": [
+          {
+            "name": "bikeRack",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.train/lib/bike.dart#BikeRack",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": false,
+            "dependencies": [
+              {
+                "lookupKey": {
+                  "root": "asset:inject.example.train/lib/common.dart#CarMaintenance",
+                  "qualifier": null
+                },
+                "isProvider": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "injectable": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "asset": "asset:inject.example.train/lib/food.dart",
+  "summary": {
+    "injector": [],
+    "module": [
+      {
+        "name": "FoodServices",
+        "providers": [
+          {
+            "name": "kitchen",
+            "kind": "method",
+            "injectedType": {
+              "lookupKey": {
+                "root": "asset:inject.example.train/lib/food.dart#Kitchen",
+                "qualifier": null
+              },
+              "isProvider": false
+            },
+            "singleton": false,
+            "asynchronous": false,
+            "dependencies": [
+              {
+                "lookupKey": {
+                  "root": "asset:inject.example.train/lib/common.dart#CarMaintenance",
+                  "qualifier": null
+                },
+                "isProvider": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "injectable": []
+  }
+}
