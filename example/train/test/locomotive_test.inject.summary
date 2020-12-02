@@ -1,8 +1,0 @@
-{
-  "asset": "asset:inject.example.train/test/locomotive_test.dart",
-  "summary": {
-    "injector": [],
-    "module": [],
-    "injectable": []
-  }
-}

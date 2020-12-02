@@ -1,8 +1,0 @@
-{
-  "asset": "asset:inject.example.coffee/bin/brew.dart",
-  "summary": {
-    "injector": [],
-    "module": [],
-    "injectable": []
-  }
-}
