@@ -30,7 +30,7 @@ class InjectCodegenBuilder extends AbstractInjectBuilder {
   String get inputExtension => 'summary';
 
   @override
-  String get outputExtension => 'dart';
+  String get outputExtension => 'g.dart';
 
   @override
   Future<String> buildOutput(BuildStep buildStep) {
@@ -106,7 +106,7 @@ class _InjectorBuilder {
   /// The URI of the library that defines the injector.
   ///
   /// Import URIs should be calculated relative to this URI. Because the
-  /// generated `.inject.dart` file sits in the same directory as the source
+  /// generated `.inject.g.dart` file sits in the same directory as the source
   /// `.dart` file, the relative URIs are compatible between the two.
   final Uri libraryUri;
 

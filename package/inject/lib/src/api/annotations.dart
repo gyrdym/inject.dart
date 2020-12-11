@@ -157,7 +157,7 @@ class Asynchronous {
 /// Annotates an abstract class used as a blueprint to generate an injector.
 ///
 /// Example:
-///     import 'coffee_shop.inject.dart';
+///     import 'coffee_shop.inject.g.dart';
 ///
 ///     @Injector(const [DripCoffeeModule])
 ///     abstract class CoffeeShop {
